@@ -3,10 +3,10 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-SCRIPT_NAME="marznode"
+SCRIPT_NAME="hamed"
 SCRIPT_VERSION="v0.1.0"
 SCRIPT_URL="https://raw.githubusercontent.com/erfjab/marznode/main/install.sh"
-INSTALL_DIR="/var/lib/marznode"
+INSTALL_DIR="/var/lib/hamed"
 LOG_FILE="${INSTALL_DIR}/marznode.log"
 COMPOSE_FILE="${INSTALL_DIR}/docker-compose.yml"
 GITHUB_REPO="https://github.com/marzneshin/marznode.git"
@@ -170,7 +170,7 @@ setup_docker_compose() {
     local port="${1:-5566}"
     cat > "$COMPOSE_FILE" <<EOF
 services:
-  marznode:
+  hamed:
     image: dawsh/marznode:latest
     restart: always
     network_mode: host
